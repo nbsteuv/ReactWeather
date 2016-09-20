@@ -10,7 +10,7 @@ var React = require('react');
 
 var About = (props) => {
   return(
-    <h2>Stateless About Component</h2>
+    <h2>About</h2>
   )
 };
 
