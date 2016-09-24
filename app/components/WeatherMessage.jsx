@@ -13,7 +13,7 @@ var React = require('react');
 var WeatherMessage = (props) => {
     var {temp, cityName} = props;
     return (
-      <p>It is {temp} in {cityName}. And I am a stateless component</p>
+      <h3 className="text-center">It is {temp} in {cityName}.</h3>
     );
 }
 
