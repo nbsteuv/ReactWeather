@@ -34,7 +34,13 @@ var Weather = React.createClass({
       </div>
     )
   },
-
+  componentDidMount: function(){
+    //First location is part of react router
+    var location = this.props.location.query.location;
+    if(location && location.length > 0){
+      this.handleSearch(location);
+    }
+  },
   handleSearch: function(cityName){
     this.setState({
       isLoading: true,
