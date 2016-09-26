@@ -39,12 +39,15 @@ var Weather = React.createClass({
     var location = this.props.location.query.location;
     if(location && location.length > 0){
       this.handleSearch(location);
+      window.location.hash = "#/";
     }
   },
   handleSearch: function(cityName){
     this.setState({
       isLoading: true,
-      errorMessage: undefined
+      errorMessage: undefined,
+      location: undefined,
+      temp: undefined
     })
     var that = this;
     openWeatherMap.getTemp(cityName).then(function(temp){
